@@ -5,4 +5,12 @@ public class Author {
         this.name = name;
         this.nameOne = nameOne;
     }
+
+    public String getName() {
+        return  this.name;
+    }
+
+    public String getNameOne() {
+        return this.nameOne;
+    }
 }
