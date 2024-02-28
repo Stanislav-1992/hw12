@@ -1,6 +1,6 @@
 public class Book {
     String title;
-    String author;
+    Object author;
     int releaseYear;
 
     public Book(String title, String author, int releaseYear) {
@@ -14,7 +14,7 @@ public class Book {
     }
 
     public String getAuthor() {
-        return this.author;
+        return (String) this.author;
     }
 
     public int getReleaseYear() {
