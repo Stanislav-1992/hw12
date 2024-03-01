@@ -11,6 +11,7 @@ public class App {
         bookOne.setReleaseYear(2023);
         System.out.println("Книга: " + bookOne.getTitle() + ", автор: " + authorOne.getName() + " " + authorOne.getNameOne() + "," +" год издания: " + bookOne.getReleaseYear());
 
+
         System.out.println(author);
         System.out.println(authorOne);
         System.out.println(book);
