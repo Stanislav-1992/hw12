@@ -1,7 +1,9 @@
+import java.util.Objects;
+
 public class Book {
-    String title;
-    Author author;
-    int releaseYear;
+    private String title;
+    private Author author;
+    private int releaseYear;
 
 
     public Book(String title, Author author, int releaseYear) {
@@ -27,16 +29,17 @@ public class Book {
     public String toString() {
         return "Книга: " + title + "; " + author + "; релиз: " + releaseYear;
     }
+
     @Override
-    public boolean equals(Object other) {
-        if (this.getClass() != other.getClass()) {
-            return false;
-        }
-        Book book = (Book) other;
-        return title.equals(book.title);
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        return releaseYear == book.releaseYear && Objects.equals(title, book.title) && Objects.equals(author, book.author);
     }
+
     @Override
     public int hashCode() {
-        return java.util.Objects.hash(releaseYear);
+        return Objects.hash(title, author, releaseYear);
     }
 }

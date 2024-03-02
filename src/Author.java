@@ -1,6 +1,8 @@
+import java.util.Objects;
+
 public class Author {
-    String name;
-    String nameOne;
+    private String name;
+    private String nameOne;
 
     public Author(String name, String nameOne) {
         this.name = name;
@@ -16,16 +18,17 @@ public class Author {
     public String toString() {
         return "Автор: " + "имя - " + name + ", фамилия - " + nameOne;
     }
+
     @Override
-    public boolean equals(Object other) {
-        if (this.getClass() != other.getClass()) {
-            return false;
-        }
-        Author author = (Author) other;
-        return name.equals(author.name);
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Author author = (Author) o;
+        return Objects.equals(name, author.name) && Objects.equals(nameOne, author.nameOne);
     }
+
     @Override
     public int hashCode() {
-        return java.util.Objects.hash(nameOne);
+        return Objects.hash(name, nameOne);
     }
 }
