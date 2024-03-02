@@ -22,7 +22,5 @@ public class App {
         System.out.println(author.hashCode());
         System.out.println(book.hashCode());
         System.out.println(bookOne.hashCode());
-
-
     }
 }
