@@ -11,7 +11,16 @@ public class App {
         bookOne.setReleaseYear(2023);
         System.out.println("Книга: " + bookOne.getTitle() + ", автор: " + authorOne.getName() + " " + authorOne.getNameOne() + "," +" год издания: " + bookOne.getReleaseYear());
 
+
+        System.out.println(author);
+        System.out.println(authorOne);
+        System.out.println(book);
+        System.out.println(bookOne);
+        System.out.println(author.equals(authorOne));
+        System.out.println(book.equals(bookOne));
+        System.out.println(authorOne.hashCode());
+        System.out.println(author.hashCode());
+        System.out.println(book.hashCode());
+        System.out.println(bookOne.hashCode());
     }
-
-
 }
